@@ -510,11 +510,6 @@ pre {
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1199px; } }
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
 
 .no-gutters {
   margin-right: 0;
@@ -19605,97 +19600,31 @@ footer .widget_getintuch.primary-light li a {
   .site-footer.style-3 .footer-top {
     background: transparent; }
 
-.connect-wallet-modal{
-      z-index: 100;
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      align-items: center;
-      justify-content: center;
-  }
-  
-  .modal-content {
-      width: 350px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 15px;
-      border: none;
-      text-align: center;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .modal-title{
-    font-size: 18px;
-    color: #535353;
-    font-weight: 600;
-  }
-  .close-modal {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      cursor: pointer;
-      color: #535353;
-  }
-  .metamask-icon{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 50px;
-  }
-  .walletConnect-icon{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 50px;
-  }
-  .connect-option{
-      margin: 10px;
-      padding: 20px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #535353 ;
-      background-color: #F2F4F6;
-      border: none;
-      border-radius: 20px;
-      text-align: start;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-  }
-  .connect-option:hover{
-    color: black;
-    font-weight: bolder;
-  }
-  @media only screen and (max-width: 575px){
-    .connect-option{
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #535353 ;
-      background-color: #F2F4F6;
-      border: none;
-      border-radius: 20px;
-      text-align: start;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-  }
-.modal-content{
-  width: 80vw;
-}
-#connect-metaMask{
-  display: none;
-}
-  }
+
+
+
 .webemodal-modal-card{
   position: fixed;
   z-index: 10000000;
 }
+#connected{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 5px;
+ max-width: 414px;
+ background-color: #fff;
+ border-radius: 15px;
+ padding-top: 10px;
+}
+#network{
+  color: #000;
+ 
+}
+#network > *{
+  font-size: 12px;
+}
+
+
 /*# sourceMappingURL=style.css.map */

@@ -100,7 +100,7 @@
 					<div class="">
 						<div class="banner-content  ">
 							<div class="text-center modulazo" style="">
-								<div class="text-white p-3 fwa" style="background-color: black;border-radius: 1rem 1rem 0rem 0rem;">
+								<div class="text-white p-3 fwa" style="background-color: black;border-radius: 1rem 1rem 0rem 0rem; display: flex; flex-direction: column; height: auto;">
 									<p>ShibaDino presale ending in:</p>
 									<div class="d-flex justify-content-center mb-3" style="gap:1rem">
 										<div id="days" class="rounded-3 time-card text-center">01d</div>
@@ -110,7 +110,27 @@
 									</div>
 									<p>LAST CHANCE TO BUY BEFORE TIER 1 EXCHANGE LISTINGS! FINAL STAGE!</p>
 									<p>Over $X Raised</p>
-								</div>
+											<div id="connected" style="display: none;" >
+											  <div id="network">
+												<p>
+												  <strong>Connected blockchain:</strong> <span id="network-name"></span>
+												</p>
+												<p>
+												  <strong>Selected account:</strong> <span id="selected-account"></span>
+												</p>
+												<p> <strong>ETH balance:</strong> <span id="accounts"></span> </p>
+											  </div>
+											</div>
+											<br>
+									  </div>
+									  <div id="templates" style="display: none">
+										<template id="template-balance">
+										  <tr>
+											<th class="address"></th>
+											<td class="balance"></td>
+										  </tr>
+										</template>
+										</div>
 								<div class=" bg-white p-3" style="color:black; border-radius: 0rem 0rem 1rem 1rem;
 								border:2px solid black">
 									<div class="separator mb-3">1 SHI = $<span id="rate_price">0.0337</span></div>
@@ -136,7 +156,7 @@
 									</div>
 									<div class="d-flex justify-content-center mb-3" style="gap:1rem">
 										<div class="input-group input-main">
-											<label>Amount in <b>ETH</b> you pay<span class="float-right fw-bold" style="font-weight: 800">MAX</span></label>
+											<label>Amount in <b class="input-currency"></b> you pay<span class="float-right fw-bold" style="font-weight: 800">MAX</span></label>
 											<input id="amount_in" class="form-control rounded-pill mr-1 pr-5" type="text" value="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '');">											<span class="input-group-append">
 												<img id="payingCurrencyImg"  class="img-input" src="images/usdt.svg">
 											</span>
@@ -149,8 +169,12 @@
 											</span>
 										</div>
 									</div>
-									<button class="botones black  mb-2 w-100 " id="btn-connect">Connect Wallet</button>
-									
+									<div id="prepare">
+										<button class="botones black  mb-2 w-100 " id="btn-connect">Connect Wallet</button>
+									  </div>
+									  <button class="botones black  mb-2 w-100" id="btn-disconnect" style="display: none;">
+										Disconnect wallet
+									  </button>
 									<button class="botones black  mb-2 w-100 " style="display: none;" id="swap" onclick="swap()">Swap</button>
 									<button class="botones white  mb-2 w-100 " onclick="changeCurrency()">Buy with <span id="buy-btn-currency">BNB</span></button>
 									<button class="botones  gray  mb-2 w-100 ">How To Buy</button>
