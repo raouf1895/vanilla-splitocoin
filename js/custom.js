@@ -695,45 +695,89 @@ var Samar = function(){
 	}, 1000);
 
 /* Exchange Rate */
-	var selectedInput = "USDT"
-	var selectedInputPrice = "1"
-	var _prices = []
-	document.getElementById("rate_price").textContent=rate;
+var selectedInput = "USDT";
+var selectedInputPrice = "1";
+var _prices = [];
+document.getElementById("rate_price").textContent = rate;
 
-	var amount_in = document.getElementById("amount_in")
-	var amount_out = document.getElementById("amount_out")
+var amount_in = document.getElementById("amount_in");
+var amount_out = document.getElementById("amount_out");
 
-	amount_in.addEventListener("keyup", (event) => {
-		if(selectedInput=="USDT"){selectedInputPrice=1}
-		if(selectedInput=="ETH"){selectedInputPrice=_prices[1].current_price}
-		if(selectedInput=="BNB"){selectedInputPrice=_prices[3].current_price}
-		amount_out.value = (parseFloat(amount_in.value)*selectedInputPrice/rate).toFixed(2);
-	});
+// Function to calculate amount_out based on selectedInput and rate
+function calculateAmountOut() {
+    if (selectedInput == "USDT") { selectedInputPrice = 1; }
+    if (selectedInput == "ETH") { selectedInputPrice = _prices[1].current_price; }
+    if (selectedInput == "BNB") { selectedInputPrice = _prices[3].current_price; }
+    if (selectedInput == "USD") { selectedInputPrice = _prices[5].current_price; }
+    amount_out.value = (parseFloat(amount_in.value) * selectedInputPrice / rate).toFixed(2);
+}
 
-	async function getPrices() {
-		const response = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd");
-		const prices = await response.json();
-		_prices = prices
-		console.log(prices[1].current_price);
-		console.log(prices[3].current_price);
-	}
+amount_in.addEventListener("keyup", (event) => {
+    calculateAmountOut();
+});
+
+async function getPrices() {
+    const response = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd");
+    const prices = await response.json();
+    _prices = prices;
+    console.log("prices", _prices);
+    console.log(prices[1].current_price);
+    console.log(prices[3].current_price);
+    console.log(prices[5].current_price);
+}
+
+/* Change currency */
+function changeCurrency() {
+    var bnbMethod = document.getElementById("bnb-method");
+    var ethMethod = document.getElementById("eth-method");
+    var btnText = document.getElementById('buy-btn-currency');
+
+    if (ethMethod.style.display === 'none') {
+        ethMethod.style.display = 'block';
+        bnbMethod.style.display = 'none';
+        btnText.innerText = "BNB";
+        document.getElementById("payingCurrencyImg").src = "images/eth.svg";
+        selectedInput = "ETH";
+        console.log(selectedInput);
+    } else {
+        ethMethod.style.display = 'none';
+        bnbMethod.style.display = 'block';
+        document.getElementById("payingCurrencyImg").src = "images/bnb.svg";
+        btnText.innerText = "ETH";
+        selectedInput = "BNB";
+        console.log(selectedInput);
+    }
+
+    calculateAmountOut(); // Call the function to update amount_out
+}
+
+// Call getPrices() to fetch initial prices
+getPrices();
 
 /*Click on payMethod*/
 	function payMethodChange(id){
-		if(id==0){
-			document.getElementById("b_eth").classList.add("actived")
-			document.getElementById("b_usdt").classList.remove("actived")
-			document.getElementById("b_bnb").classList.remove("actived")
+		var ethMethod = document.getElementById("eth-method")
 
-			document.getElementById("payingCurrencyImg").src="images/eth.svg";
-			selectedInput = "ETH"
-			console.log(selectedInput)
-
-
+		
+		if (id == 0) {
+			document.getElementById("b_eth").classList.add("actived");
+			document.getElementById("b_usdt").classList.remove("actived");
+			document.getElementById("b_usd").classList.remove("actived");
+		
+			if (ethMethod.style.display === 'none') {
+				document.getElementById("payingCurrencyImg").src = "images/bnb.svg";
+				selectedInput = "BNB";
+				console.log(selectedInput);
+				
+			} else {
+				document.getElementById("payingCurrencyImg").src = "images/eth.svg";
+				selectedInput = "ETH";
+				console.log(selectedInput);
+			}
 		} else if(id==1){
 			document.getElementById("b_eth").classList.remove("actived")
 			document.getElementById("b_usdt").classList.add("actived")
-			document.getElementById("b_bnb").classList.remove("actived")
+			document.getElementById("b_usd").classList.remove("actived")
 
 			document.getElementById("payingCurrencyImg").src="images/usdt.svg";
 			selectedInput = "USDT"
@@ -743,10 +787,10 @@ var Samar = function(){
 		} else if(id==2){
 			document.getElementById("b_eth").classList.remove("actived")
 			document.getElementById("b_usdt").classList.remove("actived")
-			document.getElementById("b_bnb").classList.add("actived")
+			document.getElementById("b_usd").classList.add("actived")
 
-			document.getElementById("payingCurrencyImg").src="images/bnb.svg";
-			selectedInput = "BNB"
+			document.getElementById("payingCurrencyImg").src="images/usd.svg";
+			selectedInput = "USD"
 			console.log(selectedInput)
 
 			
@@ -754,8 +798,10 @@ var Samar = function(){
 		if(selectedInput=="USDT"){selectedInputPrice=1}
 		if(selectedInput=="ETH"){selectedInputPrice=_prices[1].current_price}
 		if(selectedInput=="BNB"){selectedInputPrice=_prices[3].current_price}
+		if(selectedInput=="USD"){selectedInputPrice=_prices[5].current_price}
 		amount_out.value = (parseFloat(amount_in.value)*selectedInputPrice/rate).toFixed(2);
 	}
+
 
 
 	

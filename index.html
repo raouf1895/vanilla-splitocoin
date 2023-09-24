@@ -29,7 +29,7 @@
 	<!-- Metamask -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
 	<script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
-
+	<script src="https://kit.fontawesome.com/12ce7ea72e.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.1/ethers.min.js" integrity="sha512-MerZH07NkRh+wvspHBb46VQUYj/UBBmYIBtsXLSWms8Yy8RqdkG2x09puc5OkGRNwG+QfIU5ZBapUSnutI805w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
@@ -116,29 +116,34 @@
 									<div class="separator mb-3">1 SHI = $<span id="rate_price">0.0337</span></div>
 									<div class="d-flex justify-content-center mb-3" style="gap:1rem">
 										<button onclick="payMethodChange(0)" id="b_eth" class="payMethod ">
-											<img  height="10" alt="" src="images/eth.svg">
-											<span  class="ps-2 font-14 mt-1">ETH</span>
+											<div id="eth-method">
+												<img  height="10" alt="" src="images/eth.svg">
+												<span  class="ps-2 font-14 mt-1">ETH</span>
+											</div>
+											<div id="bnb-method" style="display: none;">
+												<img  height="10" alt="" src="images/bnb.svg">
+												<span  class="ps-2 font-14">BNB</span>
+											</div>
 										</button>
 										<button onclick="payMethodChange(1)"  id="b_usdt" class="payMethod actived">
 											<img  height="10" alt="" src="images/usdt.svg">
 											<span  class="ps-2 font-14">USDT</span>
 										</button>
-										<button onclick="payMethodChange(2)"  id="b_bnb" class="payMethod">
-											<img  height="10" alt="" src="images/bnb.svg">
-											<span  class="ps-2 font-14">BNB</span>
+										<button onclick="payMethodChange(2)"  id="b_usd" class="payMethod">
+											<i class="fa-regular fa-credit-card"></i>
+											<span  class="ps-2 font-14">CARD</span>
 										</button>
 									</div>
 									<div class="d-flex justify-content-center mb-3" style="gap:1rem">
 										<div class="input-group input-main">
 											<label>Amount in <b>ETH</b> you pay<span class="float-right fw-bold" style="font-weight: 800">MAX</span></label>
-											<input id="amount_in" class="form-control  rounded-pill mr-1 pr-5" type="text" value="0">
-											<span class="input-group-append">
+											<input id="amount_in" class="form-control rounded-pill mr-1 pr-5" type="text" value="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '');">											<span class="input-group-append">
 												<img id="payingCurrencyImg"  class="img-input" src="images/usdt.svg">
 											</span>
 										</div>
 										<div class="input-group input-main">
 											<label>Amount in <b>SHI</b> you receive</label>
-											<input id="amount_out"  class="form-control  rounded-pill mr-1 pr-5" type="text" value="0">
+											<input id="amount_out" class="form-control rounded-pill mr-1 pr-5" type="text" value="0" disabled>
 											<span class="input-group-append">
 												<img id="receivingCurrencyImg"  class="img-input" src="">
 											</span>
@@ -147,7 +152,7 @@
 									<button class="botones black  mb-2 w-100 " id="btn-connect">Connect Wallet</button>
 									
 									<button class="botones black  mb-2 w-100 " style="display: none;" id="swap" onclick="swap()">Swap</button>
-									<button class="botones white  mb-2 w-100 ">Buy with BNB</button>
+									<button class="botones white  mb-2 w-100 " onclick="changeCurrency()">Buy with <span id="buy-btn-currency">BNB</span></button>
 									<button class="botones  gray  mb-2 w-100 ">How To Buy</button>
 								</div>
 							</div>
