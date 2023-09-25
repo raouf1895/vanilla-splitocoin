@@ -19626,5 +19626,13 @@ footer .widget_getintuch.primary-light li a {
   font-size: 12px;
 }
 
+#mobileDeviceWarning {
+  display: none;
+  margin-top: 24px;
+  color: rgb(247, 47, 47);
+}
 
+#mobileDeviceWarning.show {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */
